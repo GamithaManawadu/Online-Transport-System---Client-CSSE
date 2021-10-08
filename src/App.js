@@ -5,6 +5,7 @@ import EmployeePrivateRoute from "./Components/EmployeePrivateRoute";
 import NavigationBar from "./Components/Shared/NavigationBar";
 import Profile from './Components/profile/Profile';
 import Recharge from './Components/Recharge/RechargeContainer'
+import TravelContainer from './Components/Travels/TravelContainer';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import {createMuiTheme, MuiThemeProvider, responsiveFontSizes} from "@material-ui/core/styles";
 import {blue} from "@material-ui/core/colors";
@@ -60,7 +61,9 @@ function App({location, snackBar, backdrop}) {
             <EmployeePrivateRoute exact path="/dashboard/recharge">
                     <Recharge/>
             </EmployeePrivateRoute>
-              
+            <EmployeePrivateRoute exact path="/dashboard/history">
+                    <TravelContainer/>
+            </EmployeePrivateRoute>
              
                 
                 <Route exact path={"/home"} component={Login}/>
